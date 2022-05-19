@@ -12,8 +12,7 @@
         }
 
         .hero-image {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/static/images/test.png");
-            background-color: #cccccc;
+            background-color: floralwhite;
             height: 100vh;
             background-position: center;
             background-repeat: no-repeat;
@@ -27,7 +26,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: white;
+            color: black;
         }
     </style>
 </head>
@@ -35,9 +34,9 @@
 <body>
     <div class="hero-image">
         <div class="hero-text">
-            <h2 style="color:white;font-size:40px;">Prediction: {{ category }}</h2>
-            <img src='static/images/output_{{ current_time }}.png' alt="Input Image" width="250" height="250">
-                <img src='static/images/output_gradcam{{ current_time }}.png' alt="Input Image" width="250" height="250">
+            <h2 style="color:black;font-size:40px;">Prediction: {{ category }}</h2>
+            <img src='static/images/output_{{ current_time }}.png' alt="Input Image" width="300" height="300">
+                <img src='static/images/output_gradcam{{ current_time }}.png' alt="Input Image" width="300" height="300">
         </div>
     </div>
 </body>

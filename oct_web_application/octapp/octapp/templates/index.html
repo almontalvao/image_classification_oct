@@ -11,8 +11,7 @@
         }
 
         .hero-image {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/static/images/test.png");
-            background-color: #cccccc;
+            background-color: floralwhite;
             height: 100vh;
             background-position: center;
             background-repeat: no-repeat;
@@ -26,16 +25,16 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: white;
+            color: black;
         }
 
         input[type=file] {
             width: 100%;
-            padding: 12px 20px;
+            padding: 20px 20px;
             margin: 8px 0;
             display: block;
-            width: 200px;
-            color: white;
+            width: 300px;
+            color: black;
             justify-content: center;
             align-items: center;
             text-align: center;
@@ -58,7 +57,7 @@
             text-align: center;
             box-sizing: border-box;
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            background-color: #DC143C;
+            background-color: seagreen;
             border-radius: 4px;
         }
     </style>
@@ -71,7 +70,7 @@
             <h1 style="font-size:50px">OCT Image Classifier</h1>
             <h3>Upload a picture to predict the retina disease! </h3>
             <form method='post' enctype=multipart/form-data> <input type="file" name="file">
-                <input type="submit" value="upload">
+                <input type="submit" value="predict">
 </body>
 
 </html>
