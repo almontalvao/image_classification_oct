@@ -117,9 +117,13 @@ def load_nn_model():
 
 def visualize_hetmaps(path, last_conv_layer_name, current_time):
     model = load_nn_model()
+    print("----------------------------------")
+    print(model.summary())
+    print("----------------------------------")
+    print(model.layers[3].name)
     img_array = get_img_array(path, size=(150,150))
     model.layers[-1].activation = None
-    heatmap = make_gradcam_heatmap(img_array, model, last_conv_layer_name)
+    heatmap = make_gradcam_heatmap(img_array, model, model.layers[3].name)
     ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
     gradcam_path = os.path.join(ROOT_DIR + f'/static/images/output_gradcam{current_time}.png')
     save_and_display_gradcam(img_path=path, heatmap=heatmap, path=gradcam_path)
